@@ -1,4 +1,6 @@
-
+:root {
+  --color-accent: oklch(80% 3% 200); /* color variable */
+}
 
 body {
     /* Set line height to 1.5 times the font size
@@ -6,9 +8,10 @@ body {
      */
     font: 100%/1.5 system-ui;
     max-width: 100ch;
-    margin-inline: auto;
-    text-align: center;
+    margin-inline: auto; 
+    text-align: center; /* */
     padding: 1ch;
+    accent-color: oklch(65% 50% 0);
    }
 
 img {
@@ -18,4 +21,41 @@ img {
 p {
   text-align: center;
 }
+
+nav {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1em;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--color-accent);
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  flex: 1;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+}
+
+nav a.current {
+  border-bottom-width: 0.4em;
+  padding-bottom: 0.1em;
+  border-bottom-color: rgb(82, 82, 97);
+  border-bottom-style: solid;
+}
+
+nav a:hover{
+  border-bottom: 0.4em;
+  border-bottom-color:beige;
+  border-bottom-style: solid;
+}
    
+/* 
+center whole box
+current page
+navigation above name
+accent color
+*/
