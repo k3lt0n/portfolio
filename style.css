@@ -83,8 +83,26 @@ label {
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  padding: 10px;
 }
 
+article {
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+}
+
+h1 {
+  font-size: 400%;
+}
+
+h2 {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
 
 
 
@@ -92,5 +110,6 @@ label {
 current nav override hover nav
 navigation above name
 change font
-display: grid; and subgrid for contact css
+3.3 display: grid; and subgrid for contact css
+4.3 horizontal alignment with subgrid
 */
