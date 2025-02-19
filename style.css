@@ -60,9 +60,14 @@ textarea,
 button {
   font: inherit;
   display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-block: 1px;
 }
+
 /* 
 current nav override hover nav
 navigation above name
 change font
+committed updates but not showing on website 
 */
