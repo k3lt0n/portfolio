@@ -54,31 +54,29 @@ nav a:hover{
   border-bottom-color: var(--accent-color1);
   border-bottom-style: solid;
 }
-   
+  
+
 input,
 textarea,
 button {
   font: inherit;
+}
+
+form {
   display: grid;
-  display: contents;
   grid-template-columns: auto 1fr;
-  grid-template-columns: subgrid;
-  grid-column: 1 / -1;
   gap: 1em;
 
-  
+  label {
+    display: grid;
+    grid-template-columns: subgrid;
+  }
 
-  /*
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  margin-block: 1px;
-*/
+  button{
+    grid-column: 1 / -1;
+  }
 }
 
-label {
-  display: subgrid;
-}
 
 .projects {
   display: grid;
