@@ -1,6 +1,8 @@
 :root {
   --accent-color1: #5bbeeb; /* color variable */
   --accent-color2: rgb(87, 143, 241);
+  color-scheme: dark;
+  
 }
 
 body {
@@ -12,8 +14,8 @@ body {
     margin-inline: auto; 
     text-align: center; /* */
     padding: 1ch;
-    background-color: #96cfe9;
-   }
+    /* background-color: #96cfe9; */
+}
 
 img {
   max-width: 50%;
@@ -29,7 +31,9 @@ nav {
   margin-bottom: 1em;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: var(--color-accent);
+  /* border-bottom-color: var(--color-accent); */
+  border-bottom-color: var(--border-color);
+  --border-color: oklch(50% 10% 200 / 40%);
   text-align: center;
 }
 
@@ -43,6 +47,13 @@ nav a {
 
 nav a.current {
   border-bottom-width: 0.4em;
+  padding-bottom: 0.1em;
+  border-bottom-color: var(--accent-color2);
+  border-bottom-style: solid;
+}
+
+nav a.current:hover {
+  border-bottom: 0.4em;
   padding-bottom: 0.1em;
   border-bottom-color: var(--accent-color2);
   border-bottom-style: solid;
@@ -109,14 +120,20 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  gap: 4px;
+  font-size: 80%;
+  font-family: inherit;
+}
 
 
 
 
 /* 
-current nav override hover nav
 navigation above name
 change font
-3.3 display: grid; and subgrid for contact css
-4.3 horizontal alignment with subgrid
 */
